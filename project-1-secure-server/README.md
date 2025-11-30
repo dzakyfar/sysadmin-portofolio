@@ -143,13 +143,13 @@ Use command : ssh-keygen -t ed25519 -C "yourname"
 
 2\. Created `.ssh` directory and configured secure permissions  
 
-mkdir -p ~/.ssh
-chmod 700  ~/.ssh
+`mkdir -p ~/.ssh`
+`chmod 700  ~/.ssh`
 
 3\. Added public key to `authorized\_keys` on the server  
 
-nano ~/.ssh/authorized_keys -> paste public key client's here
-chmod 600 ~/.ssh/authorized_keys
+`nano ~/.ssh/authorized_keys -> paste public key client's here
+chmod 600 ~/.ssh/authorized_keys`
 
 4\. Hardened `sshd\_config`  
 
@@ -164,11 +164,11 @@ chmod 600 ~/.ssh/authorized_keys
 5\. Tested SSH login using key-based authentication  
 If public key true :
 
-&nbsp;  → `screenshots/ssh_login_success.png`
+&nbsp;  → ![SSH Logic Success](./screenshots/ssh_login_success.png)
 
 If public key false
 
-&nbsp;  → `screenshots/ssh_login_failed.png`
+&nbsp;  → ![SSH Logic Failed](./screenshots/ssh_login_success.jpeg)
 
 
 Final Output: Secure SSH access (key-only, hardened daemon).
