@@ -168,7 +168,7 @@ If public key true :
 
 If public key false
 
-&nbsp;  → ![SSH Logic Failed](./screenshots/ssh_login_success.jpeg)
+&nbsp;  → ![SSH Logic Failed](./screenshots/ssh_login_failed.jpeg)
 
 
 Final Output: Secure SSH access (key-only, hardened daemon).
