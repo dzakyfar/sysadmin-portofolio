@@ -118,7 +118,7 @@ project-1-secure-server/screenshots/diagram.png
 
 
 
-5\. High-Level Implementation Steps
+5\. Implementation Steps
 
 
 
@@ -138,21 +138,18 @@ Strengthen remote access security using key-based authentication.
 
 1\. Generated ED25519 SSH key pair on the host machine  
 
-&nbsp;  → \*(Screenshot:)\* `screenshots/ssh-keygen.png`
-
-
+In client
+Use command : ssh-keygen -t ed25519 -C "yourname"
 
 2\. Created `.ssh` directory and configured secure permissions  
 
-&nbsp;  → `screenshots/ssh-permissions.png`
-
-
+mkdir -p ~/.ssh
+chmod 700  ~/.ssh
 
 3\. Added public key to `authorized\_keys` on the server  
 
-&nbsp;  → `screenshots/authorized-keys.png`
-
-
+nano ~/.ssh/authorized_keys -> paste public key client's here
+chmod 600 ~/.ssh/authorized_keys
 
 4\. Hardened `sshd\_config`  
 
@@ -164,12 +161,14 @@ Strengthen remote access security using key-based authentication.
 
 &nbsp;  → `screenshots/sshd-config.png`
 
-
-
 5\. Tested SSH login using key-based authentication  
+If public key true :
 
-&nbsp;  → `screenshots/ssh-login-success.png`
+&nbsp;  → `screenshots/ssh_login_success.png`
 
+If public key false
+
+&nbsp;  → `screenshots/ssh_login_failed.png`
 
 
 Final Output: Secure SSH access (key-only, hardened daemon).
