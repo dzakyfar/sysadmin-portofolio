@@ -32,16 +32,6 @@ The project includes the implementation and verification of multiple security la
 
 
 
-Each module is configured, tested, documented, and supported with terminal outputs and screenshots.
-
-
-
-The goal is to simulate real-world SysAdmin / DevOps server security practices and produce a 
-
-professional portfolio-ready implementation.
-
-
-
 ---
 
 
